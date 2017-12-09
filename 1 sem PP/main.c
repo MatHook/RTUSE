@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
   }
   else
   {
+    char filename[256];
 
     printf("File name not found. Enter file name: ");
     scanf("%s",filename );
@@ -28,6 +29,7 @@ int main(int argc, char *argv[])
 
   for (int i=0;(z=getc(fi))!=-1;i++)
   {
+    ungetc(z,f);
     firead(&ch,sizeof(int),1,fi);
     firead(s,sizeof(char),256,fi);
     firead(%a,sizeof(float),1,fi);
