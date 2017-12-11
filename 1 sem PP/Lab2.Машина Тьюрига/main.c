@@ -9,7 +9,7 @@ struct chss
    unsigned char mem;
    struct chss* right;
    struct chss* left;
-}
+};
 struct chss * chs;
 void process_command(int code);
 int process_line();
@@ -127,7 +127,7 @@ void process_command(int code)
             chs -> right = (struct chss*)malloc(sizeof(struct chss));
             chs = cell -> right;
             chs -> left = temp;
-            chs -> data = 0;
+            chs -> mem = 0;
             chs -> right = NULL;
     }
     break;
@@ -143,25 +143,25 @@ void process_command(int code)
     }
     break;
     case 4:
-        if(chs -> data != 0)
+        if(chs -> mem != 0)
             {
-              chs -> data --;
+              chs -> mem --;
             }
         break;
     case 5:
-        printf("%d \n", chs -> data);
+        printf("%d \n", chs -> mem);
         break;
     case 6:
         {
             printf("Please enter a number 0 to 255 ");
             unsigned int temp;
             scanf("%u", &temp);
-            chs -> data = temp;
+            chs -> mem = temp;
             printf("\n");
         }
         break;
     case 7:
-        printf("%c \n", (chs -> data));
+        printf("%c \n", (chs -> mem));
         break;
     case 8:
         {
@@ -175,7 +175,7 @@ void process_command(int code)
                 s[i] = process_line();
             }
             int max = i;
-            while(chs -> data)
+            while(chs -> mem)
             {
                 for(i = 0; i < max; i++)
                 {
