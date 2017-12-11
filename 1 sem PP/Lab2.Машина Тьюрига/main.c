@@ -10,7 +10,7 @@ struct chss
    struct chss* right;
    struct chss* left;
 };
-struct chss * chs;
+struct chss* chs;
 void process_command(int code);
 int process_line();
 int main(int argc, char *argv[])
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
   }
     else
     {
-      f = fopen(argc[1],r);
+      f = fopen(argc[1],"r");
     }
 
     if(f)
