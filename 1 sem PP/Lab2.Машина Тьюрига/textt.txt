@@ -1,8 +1,45 @@
-movl 
-                      inc 
-                                              movr
-             inc
-movl 
-   inc 
-movl 
-                      printc
+inc
+inc
+inc
+* got 3
+print
+***
+begin
+* incrementing until we get 0
+inc
+end
+***
+* test min value
+dec
+***
+* test user input and print
+get
+print
+printc
+movl
+***
+* test loop
+movl
+begin
+* should not output 0
+print
+print
+print
+end
+* test loop 2
+inc
+begin
+inc
+inc
+begin
+dec
+end
+end
+***
+* move test
+get
+movl
+get
+printc
+movr
+printc
