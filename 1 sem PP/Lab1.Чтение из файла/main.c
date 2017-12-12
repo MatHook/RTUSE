@@ -3,15 +3,15 @@
 
 int main(int argc, char *argv[])
 {
-  FILE *fi=NULL;
+  FILE *fi = NULL;
   int c,z;
   int ch;
   char st[256];
   float a;
 
-  if (argc>1)
+  if (argc > 1)
   {
-    fi=fiopen(argv[1],"rb")
+    fi= fopen(argv[1],"rb");
   }
   else
   {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
     printf("File name not found. Enter file name: ");
     scanf("%s",filename );
-    fi=fiopen(filename,"rb");
+    fi=fopen(filename,"rb");
   }
   if (fi==NULL)
   {
@@ -29,11 +29,11 @@ int main(int argc, char *argv[])
 
   for (int i=0;(z=getc(fi))!=-1;i++)
   {
-    ungetc(z,f);
-    firead(&ch,sizeof(int),1,fi);
-    firead(s,sizeof(char),256,fi);
-    firead(%a,sizeof(float),1,fi);
+    ungetc(z,fi);
+    fread("&ch",sizeof(int),1,fi);
+    fread("s",sizeof(char),256,fi);
+    fread("%a",sizeof(float),1,fi);
 
-    printf("pkt. %d \t %d \t %s \t %f \n",i+1,ch,st,a)
+    printf("pkt. %d \t %d \t %s \t %f \n",i+1,ch,st,a);
   }
 }
