@@ -1,0 +1,8 @@
+movl 
+                      inc 
+                                              movr
+             inc
+movl 
+   inc 
+movl 
+                      printc
