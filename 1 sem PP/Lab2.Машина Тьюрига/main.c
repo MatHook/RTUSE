@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
   chs = (struct chss*)malloc(sizeof(struct chss));
   chs -> left = NULL;
   chs -> right = NULL;
-  chs -> mem = NULL;
+  chs -> mem = 0;
 
   if (argc != 2)
   {
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
   }
     else
     {
-      f = fopen(argc[1],"r");
+      f = fopen(argv[1],"r");
     }
 
     if(f)
@@ -108,8 +108,8 @@ void process_command(int code)
     }
     else
     {
-      struct chss* temp = chss;
-      chs -> left = struct(chss*)malloc(sizeof(struct chss));
+      struct chss* temp = chs;
+      chs -> left = (struct chss*)malloc(sizeof(struct chss));
       chs = chs -> left;
       chs -> mem = 0;
       chs -> right = temp;
@@ -125,7 +125,7 @@ void process_command(int code)
     {
       struct chss* temp = chs;
             chs -> right = (struct chss*)malloc(sizeof(struct chss));
-            chs = cell -> right;
+            chs = chs -> right;
             chs -> left = temp;
             chs -> mem = 0;
             chs -> right = NULL;
@@ -134,7 +134,7 @@ void process_command(int code)
     case 3:
     if (chs -> mem == 255)
     {
-      chs -> mem =0;
+      chs -> mem = 0;
       printf("chs memory is too large \n");
     }
     else
