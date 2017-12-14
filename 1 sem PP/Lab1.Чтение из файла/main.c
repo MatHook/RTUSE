@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
   else
   {
     char filename[256];
-
     printf("File name not found. Enter file name: ");
     scanf("%s",filename );
     fi=fopen(filename,"rb");
