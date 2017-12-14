@@ -1,188 +1,274 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-char str[256];
-FILE *f=NULL;
-int get_code(char *comm);
-struct chss
-{
-   unsigned char mem;
-   struct chss* right;
-   struct chss* left;
+#define COMMAND_PRINT		0
+#define COMMAND_PRINT_ASCII 1
+#define COMMAND_MOVE_LEFT	2
+#define COMMAND_MOVE_RIGHT	3
+#define COMMAND_INCREMENT	4
+#define COMMAND_DECREMENT	5
+#define COMMAND_LOOP_START	6
+#define COMMAND_LOOP_END	7
+#define COMMAND_USER_INPUT	8
+
+struct node {
+	struct node *ptr_l;
+	struct node *ptr_r;
+
+	unsigned char value;
 };
-struct chss* chs;
-void process_command(int code);
-int process_line();
+
+struct node *create_node(void);
+struct node *move_l(struct node *);
+struct node *move_r(struct node *);
+void node_inc(struct node *);
+void node_dec(struct node *);
+void print_node_value(struct node *);
+void print_node_value_ascii(struct node *);
+void write_user_input_to_node(struct node *);
+
+int *get_commands_from_file(char config_file[]);
+
+void execute(int commands[], struct node *, int current_index);
+
 int main(int argc, char *argv[])
 {
-  chs = (struct chss*)malloc(sizeof(struct chss));
-  chs -> left = NULL;
-  chs -> right = NULL;
-  chs -> mem = 0;
+	int *command_list = NULL;
 
-  if (argc != 2)
-  {
-    printf("File name not found");
-  }
-    else
-    {
-      f = fopen(argv[1],"r");
-    }
+	if (argc > 1)
+		command_list = get_commands_from_file(argv[1]);
+	else
+	{
+		printf("Error: filename with commands not provided!\n");
+		exit(1);
+	}
 
-    if(f)
-    {
-      while(!feof(f))
-      {
-        process_command(process_line());
-      }
-    }
-    else
-    {
-      printf("\n Can't read this file");
-    }
-    fclose(f);
-    return 0;
+	struct node *current_node = create_node();
+
+	execute(command_list, current_node, 0);
+
+	return 0;
 }
 
-int process_line()
+void execute(int commands[], struct node *n, int current_index)
 {
-  int index = 0;
-  if (!feof(f))
-  {
-    fgets(str, sizeof(str),f);
-    while((str[index] == '\t') || (str[index] == ' '))
-    {
-      index++;
-    }
-    return get_code(str + index);
-  }
-  return 0;
+	int i, num_loops;
+
+	for (i = current_index; commands[i] != -1; i++)
+	{
+		/* printf("Index: %d Command: %d Value: %d\n", i, commands[i], n->value); */
+		switch (commands[i]){
+			case COMMAND_PRINT:
+				print_node_value(n);
+				break;
+
+			case COMMAND_PRINT_ASCII:
+				print_node_value_ascii(n);
+				break;
+
+			case COMMAND_MOVE_LEFT:
+				n = move_l(n);
+				break;
+
+			case COMMAND_MOVE_RIGHT:
+				n = move_r(n);
+				break;
+
+			case COMMAND_INCREMENT:
+				node_inc(n);
+				break;
+
+			case COMMAND_DECREMENT:
+				node_dec(n);
+				break;
+
+			case COMMAND_LOOP_START:
+				while (n->value != 0) execute(commands, n, i + 1);
+
+				i++;
+				for (num_loops = 1; num_loops > 0; i++)
+				{
+					if (commands[i] == -1) return;
+					else if (commands[i] == COMMAND_LOOP_START) num_loops++;
+					else if (commands[i] == COMMAND_LOOP_END)	num_loops--;
+				}
+				i--;
+
+				break;
+
+			case COMMAND_LOOP_END:
+				return;
+
+			case COMMAND_USER_INPUT:
+				write_user_input_to_node(n);
+				break;
+		}
+	}
 }
-int get_code(char * comm){
-    if((comm[0] == 'm') && (comm[3] == 'l'))    /*command -> movl*/
-        {
-          return 1;
-        }
-    if((comm[0] == 'm') && (comm[3] == 'r'))    /*command -> movr*/
-        {
-          return 2;
-        }
-    if (comm[0] == 'i')   /*command -> inc*/
-        {
-          return 3;
-        }
-    if (comm[0] == 'd')   /*command -> dec*/
-        {
-          return 4;
-        }
-    if((comm[0] == 'p') && (comm[5] == 'c'))   /*command -> printc*/
-        {
-          return 7;
-        }
-    if(comm[0] == 'p')   /*command -> print*/
-        {
-          return 5;
-        }
-    if(comm[0] == 'g')   /*command -> get*/
-        {
-          return 6;
-        }
-    if(comm[0] == 'b')   /*command -> begin*/
-        {
-          return 8;
-        }
-    if(comm[0] == 'e')   /*command -> end.*/
-        {
-          return 9;
-        }
-    return 0;
-}
-void process_command(int code)
+
+struct node *create_node(void)
 {
-  switch(code)
-  {
-    case 1:
-    if (chs -> left != NULL)
-    {
-      chs = chs -> left;
-    }
-    else
-    {
-      struct chss* temp = chs;
-      chs -> left = (struct chss*)malloc(sizeof(struct chss));
-      chs = chs -> left;
-      chs -> mem = 0;
-      chs -> right = temp;
-      chs -> left = NULL;
-    }
-    break;
-    case 2:
-    if(chs -> right != NULL)
-    {
-      chs = chs-> right;
-    }
-    else
-    {
-      struct chss* temp = chs;
-            chs -> right = (struct chss*)malloc(sizeof(struct chss));
-            chs = chs -> right;
-            chs -> left = temp;
-            chs -> mem = 0;
-            chs -> right = NULL;
-    }
-    break;
-    case 3:
-    if (chs -> mem == 255)
-    {
-      chs -> mem = 0;
-      printf("chs memory is too large \n");
-    }
-    else
-    {
-      chs -> mem++;
-    }
-    break;
-    case 4:
-        if(chs -> mem != 0)
-            {
-              chs -> mem --;
-            }
-        break;
-    case 5:
-        printf("%d \n", chs -> mem);
-        break;
-    case 6:
-        {
-            printf("Please enter a number 0 to 255 ");
-            unsigned int temp;
-            scanf("%u", &temp);
-            chs -> mem = temp;
-            printf("\n");
-        }
-        break;
-    case 7:
-        printf("%c \n", (chs -> mem));
-        break;
-    case 8:
-        {
-            int i = 0;
-            char s[256];
-            s[0] = process_line();
-            while((s[i] != 9) && (!feof(f)))
-            {
-                process_command(s[i]);
-                i++;
-                s[i] = process_line();
-            }
-            int max = i;
-            while(chs -> mem)
-            {
-                for(i = 0; i < max; i++)
-                {
-                    process_command(s[i]);
-                }
-            }
-        }
-        break;
-  }
+	struct node *n = malloc(sizeof(struct node));
+	n->value = 0;
+
+	return n;
+}
+
+struct node *move_l(struct node *n)
+{
+	if (n->ptr_l == NULL)
+	{
+		n->ptr_l = create_node();
+		n->ptr_l->ptr_r = n;
+	}
+
+	return n->ptr_l;
+}
+
+struct node *move_r(struct node *n)
+{
+	if (n->ptr_r == NULL)
+	{
+		n->ptr_r = create_node();
+		n->ptr_r->ptr_l = n;
+	}
+
+	return n->ptr_r;
+}
+
+void node_inc(struct node *n)
+{
+	if (n->value == 255)
+	{
+		printf("Warning: reached max node value. Setting from 255 to 0\n");
+		n->value = 0;
+	}
+	else
+		n->value++;
+}
+
+void node_dec(struct node *n)
+{
+	if (n->value == 0)
+	{
+		printf("Warning: reached min node value. Setting from 0 to 255\n");
+		n->value = 255;
+	}
+	else
+		n->value--;
+}
+
+void print_node_value(struct node *n)
+{
+	printf("%d\n", n->value);
+}
+
+void print_node_value_ascii(struct node *n)
+{
+	printf("%c\n", n->value);
+}
+
+void write_user_input_to_node(struct node *n)
+{
+	char c;
+
+	printf("Enter char: ");
+	scanf("%c", &c);
+	getchar();
+
+	n->value = c;
+}
+
+int *get_commands_from_file(char *filename)
+{
+	/*
+	 * Reads commands from file and returns pointer to
+	 * int array with command indexes
+	 */
+
+	int i, j;
+	size_t commands_capacity = 16;
+	int *commands = malloc(commands_capacity * sizeof(int));
+
+	FILE *f = fopen(filename, "r");
+
+	if (f == NULL)
+	{
+		printf("Error: could not read file %s! Exiting.", filename);
+		exit(1);
+	}
+
+	int c;
+	char line[256];  /* line len is guaranteed to be <= 255 + \0 */
+
+	for (i = j = 0; (c = getc(f)) != EOF; i++, j = 0)
+	{
+		if (c == ' ' || c == '\t') ungetc(c, f);
+
+		while (c == ' ' || c == '\t')
+		{
+			c = getc(f);
+		}
+
+		if (c == '*')  /* pass commented lineI */
+		{
+			while (c  != '\n' && c != EOF)
+			{
+				c = getc(f);
+				if (c == EOF) break;
+			}
+
+			i--;
+			continue;
+		}
+
+		line[j] = c;
+		j++;
+
+		while ((c  = getc(f)) != EOF && c != '\n')
+		{
+			if (c != ' ' && c != '\t')
+			{
+				line[j] = c;
+				j++;
+			}
+		}
+
+		line[j] = '\0';
+
+		if (i + 2 > commands_capacity)
+		{
+			commands_capacity *= 2;;
+			commands = realloc(commands, commands_capacity * sizeof(int));
+		}
+
+		if (strcmp(line, "print") == 0)
+			commands[i] = COMMAND_PRINT;
+		else if (strcmp(line, "printc") == 0)
+			commands[i] = COMMAND_PRINT_ASCII;
+		else if (strcmp(line, "movl") == 0)
+			commands[i] = COMMAND_MOVE_LEFT;
+		else if (strcmp(line, "movr") == 0)
+			commands[i] = COMMAND_MOVE_RIGHT;
+		else if (strcmp(line, "inc") == 0)
+			commands[i] = COMMAND_INCREMENT;
+		else if (strcmp(line, "dec") == 0)
+			commands[i] = COMMAND_DECREMENT;
+		else if (strcmp(line, "begin") == 0)
+			commands[i] = COMMAND_LOOP_START;
+		else if (strcmp(line, "end") == 0)
+			commands[i] = COMMAND_LOOP_END;
+		else if (strcmp(line, "get") == 0)
+			commands[i] = COMMAND_USER_INPUT;
+		else
+		{
+			printf("Error: unknow command! (%s)", line);
+			exit(1);
+		}
+	}
+
+	commands[i] = -1;  /* indicate end of array */
+
+	return commands;
 }
