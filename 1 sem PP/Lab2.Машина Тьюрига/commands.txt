@@ -12,21 +12,7 @@ end
 * test min value
 dec
 ***
-* test user input and print
-get
-print
-printc
-movl
-***
-* test loop
-movl
-begin
-* should not output 0
-print
-print
-print
-end
-* test loop 2
+* test loop 
 inc
 begin
 inc
