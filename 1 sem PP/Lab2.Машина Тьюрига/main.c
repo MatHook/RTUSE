@@ -182,12 +182,12 @@ void write_user_input_to_node(struct node *n)
 
 int *get_commands_from_file(char *filename)
 {
-	/*
+	/* 
 	 * Reads commands from file and returns pointer to
 	 * int array with command indexes
 	 */
 
-	int i, j;
+	unsigned int i, j;
 	size_t commands_capacity = 16;
 	int *commands = malloc(commands_capacity * sizeof(int));
 
