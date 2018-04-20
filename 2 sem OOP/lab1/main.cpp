@@ -28,7 +28,9 @@ double max_Abs(complex *zmas,int n)
 
 int main()
 {
-    /* 1st Tusk
+    //1st Tusk
+
+    /* 
     int flag=-1;
     int i=0;
     complex z1,z2,zres;
@@ -134,6 +136,9 @@ int main()
     }
     return 0;
      */
+
+    //2nd Tusk
+
     int n;
     
     ifstream file("complex.txt");
