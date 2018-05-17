@@ -15,9 +15,9 @@ static void Main(string[] args)
             Queue<string> washing = new Queue<string>(); 
 
             washing.Enqueue("Matvey"); 
-            washing.Enqueue("Fil"); 
+            washing.Enqueue("Konstantin"); 
             washing.Enqueue("Masha"); 
-            washing.Enqueue("Zorina"); 
+            washing.Enqueue("Katya"); 
 
             while(washing.Count!=0) 
             { 
@@ -38,8 +38,8 @@ static void Main(string[] args)
             } 
             */
             Dictionary<string, int, int> student = new Dictionary<string, int, int>(); 
-student.Add(new Student("Jopa", 20, 4)); 
-student.Add(new Student("FILIP", 18, 1)); 
+student.Add(new Student("Andrey", 20, 4)); 
+student.Add(new Student("Filip", 18, 1)); 
 foreach(Object obj in student) 
 { 
 Console.WriteLine(obj); 
