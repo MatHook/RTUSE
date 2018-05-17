@@ -40,6 +40,7 @@ static void Main(string[] args)
 Dictionary<string, int, int> student = new Dictionary<string, int, int>(); 
 student.Add(new Student("Andrey", 20, 4)); 
 student.Add(new Student("Filip", 18, 1)); 
+
 foreach(Object obj in student) { 
             Console.WriteLine(obj); 
 }
