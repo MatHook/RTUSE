@@ -30,8 +30,8 @@ namespace TestConsoleApplication
 
 
             string name2 = "Александр";
-            string otchestvo2 = "Анатольевич";
-            string surname2 = "Лобанов";
+            string otchestvo2 = "Сергеевич";
+            string surname2 = "Пушкин";
 
             Console.WriteLine(CreateFio(surname, name, otchestvo));
             Console.WriteLine(CreateFioInitials(surname, name, otchestvo));
