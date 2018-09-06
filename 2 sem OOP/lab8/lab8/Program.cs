@@ -1,42 +1,43 @@
-﻿using System; 
-using System.Collections.Generic; 
-using System.Collections; 
-using System.Linq; 
-using System.Text; 
-using System.Threading.Tasks; 
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection;
 
-namespace Lab8 
-{ 
-class Program 
-{ 
-static void Main(string[] args) 
+namespace Lab8
 {
-            /* 
-            Queue<string> washing = new Queue<string>(); 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> washing = new Queue<string>();
 
-            washing.Enqueue("Matvey"); 
-            washing.Enqueue("Konstantin"); 
-            washing.Enqueue("Masha"); 
-            washing.Enqueue("Katya"); 
+            washing.Enqueue("Matvey");
+            washing.Enqueue("Konstantin");
+            washing.Enqueue("Masha");
+            washing.Enqueue("Katya");
 
-            while(washing.Count!=0) 
-            { 
-            Console.WriteLine(washing.Peek()); 
-            washing.Dequeue(); 
-            } 
+            while (washing.Count != 0)
+            {
+                Console.WriteLine(washing.Peek());
+                washing.Dequeue();
+            }
+
+
+            /*
+            var Compl = new List<Tuple<double, double>>() {
+                Tuple.Create(0.5, 12.0),
+                Tuple.Create(-5.0, -35.902)
+            };
+
+            foreach( Tuple<double, double> value in Compl) {
+                Console.WriteLine(value.Item1 + "+(" + value.Item2 + ")i");
+            }
             */
 
-            /* 
-            List<Complex> Compl = new List<Complex>(); 
-            Compl.Add(new Complex(0.5, 12)); 
-            Compl.Add(new Complex(-5, -35.902)); 
-
-            while(Compl.Count!=0) 
-            { 
-            Console.WriteLine(Compl.First().Re + " " + Compl.First().Im + "i"); 
-            Compl.RemoveAt(0); 
-            } 
-            */
+            /*
 Dictionary<string, int, int> student = new Dictionary<string, int, int>(); 
 student.Add(new Student("Andrey", 20, 4)); 
 student.Add(new Student("Filip", 18, 1)); 
@@ -82,6 +83,7 @@ public class Student
             Complex(Complex obj) { 
                         Re = obj.Re; 
                         Im = obj.Im; 
-            } 
-} 
+            } */
+        }
+    }
 }
