@@ -67,7 +67,7 @@ public class lab1 {
     }
     public static int factorialrecfun(int n) {
         int result;
-        if(n==1) {
+        if(n == 1) {
             return 1;
         }
         System.out.println(result = n*factorialrecfun(n-1));
