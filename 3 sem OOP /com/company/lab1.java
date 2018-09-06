@@ -1,8 +1,5 @@
 package com.company;
 import java.util.*;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Arrays.*;
 
 public class lab1 {
 
@@ -16,6 +13,7 @@ public class lab1 {
         garmon(); // Harmonic output
         Randomizer3000(); //Random not sorted and sorted arrays
         factorialfun(5); //Factorial
+        factorialrecfun(5); //Factorial in recursion metod
     }
     public static void forefun() {
         int[] array = {1, 31, 87, 23};
@@ -65,6 +63,14 @@ public class lab1 {
         int factor = 1;
         for (int i = 1; i <= n; i++)
             factor *= i;
-        System.out.print("\nFactorial of " + n +" is " + factor);
+        System.out.print("\nFactorial of " + n +" is " + factor + "\n");
+    }
+    public static int factorialrecfun(int n) {
+        int result;
+        if(n==1) {
+            return 1;
+        }
+        System.out.println(result = n*factorialrecfun(n-1));
+        return result;
     }
 }
