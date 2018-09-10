@@ -1,4 +1,4 @@
-package S.A.D.Lab_11;
+package SAD.Lab11;
 
 import java.util.Comparator;
 
