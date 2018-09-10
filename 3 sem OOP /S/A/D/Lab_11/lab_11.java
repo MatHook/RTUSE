@@ -1,9 +1,7 @@
-package S.A.D;
+package S.A.D.Lab_11;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
 import java.util.Scanner;
 
