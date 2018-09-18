@@ -32,7 +32,7 @@ public class lab_8 {
             System.out.println();
         }
     }
-    public static void msort(int[][] sdarray, int max_m, int max_n) {
+    public static void msort(int[][] sdarray, int max_m, int max_n) { //not working correctly
         Scanner sc_sort = new Scanner(System.in);
         int t;
 
