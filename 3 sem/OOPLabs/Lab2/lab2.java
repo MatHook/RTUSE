@@ -1,4 +1,4 @@
-package OOPLabs.Lab1;
+package OOPLabs.Lab2;
 
 import java.awt.*;
 import java.util.Scanner;
