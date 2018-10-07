@@ -3,7 +3,7 @@ package OOPLabs.Lab2;
 import java.awt.*;
 import java.util.Scanner;
 
-public class lab2 {
+public class lab2_1 {
     public static void main(String[] args) {
         Circle cc = new Circle();
         System.out.println(cc);
