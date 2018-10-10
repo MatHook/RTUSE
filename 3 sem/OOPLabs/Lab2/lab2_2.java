@@ -1,58 +1,45 @@
 package OOPLabs.Lab2;
 
-import java.util.Scanner;
-
 public class lab2_2 {
     public static void main(String[] args) {
-        Human human = new Human();
-        Head head = new Head();
-        Leg leg = new Leg();
+        Human h1 = new Human();
+        Head h2 = new Head();
+        Hand h3 = new Hand();
+        Leg h4 = new Leg();
+        System.out.println("Id is " + h1.getPerson_id());
+        System.out.println("Id of person is " + h2.getPerson_id()
+                + " and brain of this person is " + h2.status_brain());
+        System.out.println("Id is " + h3.getPerson_id()
+                + " quantity of hands is " + h3.quntity_hands());
+        System.out.println("Id is " + h4.getPerson_id()
+                + " quantity of legs is " + h4.quantity_legs());
     }
 }
 
 class Human {
-    private int person_id;
+    private int person_id = 1;
     Human() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter id of person: ");
-        person_id = sc.nextInt();
     }
-
-    public int getPerson_id() {
+    int getPerson_id() {
         return person_id;
     }
 }
 
 class Head extends Human {
-    int hh = new Human().getPerson_id();
-
-    Head() {
-        boolean brain_empty = false;
-        System.out.println(brain_empty);
+    public boolean status_brain() {
+        return true;
     }
+
 }
 
 class Leg extends Human {
-    int hh = new Human().getPerson_id();
-
-    public Leg() {
-        System.out.print("Enter quantity of legs: ");
-        Scanner sc = new Scanner(System.in);
-        int q_leg = sc.nextInt();
-        System.out.print("\nLegs alive?");
-        boolean leg_alive = sc.nextBoolean();
-        System.out.print("\nQuantity of legs: " + q_leg);
+    public int quantity_legs() {
+        return 2;
     }
 }
 
 class Hand extends Human {
-    int hh = new Human().getPerson_id();
-
-    public Hand() {
-        System.out.print("Enter quantity of hand: ");
-        Scanner sc = new Scanner(System.in);
-        int q_hands = sc.nextInt();
-        System.out.print("\nHand long?");
-        boolean l_hands = sc.nextBoolean();
+    public int quntity_hands() {
+        return 2;
     }
 }

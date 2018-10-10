@@ -13,32 +13,30 @@ public class lab2_1 {
     }
 }
 class Circle {
-    Scanner sc = new Scanner(System.in);
     private int R;
     private Point point;
 
-    public Circle() {
+    Circle() {
         point = new Point(0, 0);
         System.out.print("Enter Radius of circle: ");
+        Scanner sc = new Scanner(System.in);
         R = sc.nextInt();
     }
 
-    public Circle(int r, int x, int y) {
+    Circle(int r, int x, int y) {
         point = new Point(x, y);
         R = r;
     }
 
-    public int getRadius() {
+    int getRadius() {
         return R;
     }
 
-    public double getArea() {
-        System.out.print("\nArea of circle: ");
+    double getArea() {
         return Math.PI*R*R;
     }
 
-    public double getLengtCircle() {
-        System.out.print("\nLength of circle: ");
+    double getLengtCircle() {
         return 2 * Math.PI * R;
     }
 }
