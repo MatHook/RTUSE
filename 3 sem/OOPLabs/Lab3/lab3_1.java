@@ -2,7 +2,7 @@ package OOPLabs.Lab3;
 
 public class lab3_1 {
     public static void main(String[] args) {
-        Dish dish = new Dish() {
+        Dish dish = new Dish(true) {
             @Override
             public void displayInfo() {
 
@@ -16,10 +16,6 @@ abstract class Dish {
 
     Dish(boolean check_dish) {
         this.check_dish = check_dish;
-    }
-
-    public Dish() {
-
     }
 
     public abstract void displayInfo();
