@@ -21,7 +21,7 @@ public class lab3_2 {
     }
 }
 
-class Dog {
+abstract class Dog {
     private boolean alive_check;
 
     boolean isAlive_check() {
