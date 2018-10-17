@@ -1,13 +1,13 @@
-package OOPLabs.Lab4;
+package OOPLabs.Lab4.Lab4_1;
 
-public class Cars implements Nameable {
+public class Animals {
     private String name;
 
     String getName() {
         return name;
     }
 
-    Cars(String name) {
+    Animals(String name) {
         this.name = name;
     }
     public void print() {
