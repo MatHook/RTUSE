@@ -1,5 +1,8 @@
 package OOPLabs.Lab4.Lab4_2;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Food implements Priceble {
     private int price;
 
@@ -12,6 +15,8 @@ public class Food implements Priceble {
     }
 
     public void print() {
-        System.out.println("Price is: " + price + "$");
+        NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
+        String cur_price_food = format.format(price);
+        System.out.println("Price is: " + cur_price_food);
     }
 }

@@ -2,31 +2,31 @@ package OOPLabs.Lab5;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
-public class lab5_1 extends JFrame{
-    public static void main(String[] args) {
-        new lab5_1();
+public class lab5_1 {
+    public static void main(String[] args) throws InterruptedException {
+        Random rnd = new Random();
+        MyFrame frame = new MyFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
-    JPanel[] pnl = new JPanel[20];
-    private lab5_1(){
-        setLayout(new FlowLayout());
-        setSize(200, 200);
-        setVisible(true);
+    private static void draw(MyFrame frame, int x, int y) {
+        frame.draw(x, y);
     }
 }
 
-abstract class Shape {
-    private String color;
-    private int R;
+class MyFrame extends JFrame {
+   MyFrame(){
+       this.setBounds(0, 0, 1000, 1000);
+    }
+    public void paint(Graphics g) {
+       g.fillOval(10, 10, 100, 100);
+    }
+    void draw(int x, int y) {
+       Graphics g = getGraphics();
 
-    int getR() {
-        return R;
-    }
-    String getColor() {
-        return color;
-    }
-    Shape(String color, int R) {
-        this.color = color;
-        this.R = R;
+       g.drawOval(x, y, 100, 100);
+       repaint();
     }
 }

@@ -29,7 +29,7 @@ class Cup extends Dish {
     private String color_cup;
     private String type_dish;
 
-    public Cup(boolean check_dish, String c_cup, String t_dish) {
+    Cup(boolean check_dish, String c_cup, String t_dish) {
         super(check_dish);
         this.color_cup = c_cup;
         this.type_dish = t_dish;
