@@ -10,6 +10,9 @@ public class lab5_1 {
         MyFrame frame = new MyFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        for (int i = 0; i < 20; i++) {
+            draw(frame, rnd.nextInt(800), rnd.nextInt(800));
+        }
     }
     private static void draw(MyFrame frame, int x, int y) {
         frame.draw(x, y);
