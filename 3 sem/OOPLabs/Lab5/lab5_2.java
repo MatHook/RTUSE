@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class lab5_2 {
     public static void main(String[] args) throws  Exception{
-        new lab5_2(args[0]);
+        new lab5_2("out/production/Labs/image.jpg");
     }
 
     public lab5_2(final String filename) throws Exception {
