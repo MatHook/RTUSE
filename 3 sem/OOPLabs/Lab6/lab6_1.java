@@ -41,6 +41,8 @@ class Frame extends JFrame {
                 int user_int = Integer.parseInt(textfield.getText());
                 if (user_int == random_int) {
                     label1.setText("You win!");
+                    JOptionPane.showMessageDialog(null,"Try again later");
+                    f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
                 }
                 else if (user_int > random_int) {
                     label1.setText("Your number bigger than computer's number");
@@ -50,6 +52,7 @@ class Frame extends JFrame {
                 }
                 summ[0] += 1;
                 if (summ[0] == 3) {
+                    JOptionPane.showMessageDialog(null,"You lose!");
                     f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
                 }
         };
