@@ -23,6 +23,7 @@ class Frame extends JFrame {
         label1.setBounds(100, 110, 200, 100);
         JTextField textfield = new JTextField();
         textfield.setBounds(110, 50, 100, 25);
+
         f.add(label1);
         f.add(textfield);
         f.add(label);
@@ -31,6 +32,7 @@ class Frame extends JFrame {
         f.setLayout(null);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         Random rnd = new Random();
         int random_int = rnd.nextInt(20);
         final int[] summ = {0};
