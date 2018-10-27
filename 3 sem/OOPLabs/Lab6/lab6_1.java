@@ -20,7 +20,7 @@ class Frame extends JFrame {
         label.setText("Enter number :");
         label.setBounds(10, 10, 100, 100);
         JLabel label1 = new JLabel();
-        label1.setBounds(100, 110, 200, 100);
+        label1.setBounds(100, 110, 300, 100);
         JTextField textfield = new JTextField();
         textfield.setBounds(110, 50, 100, 25);
 
@@ -28,7 +28,7 @@ class Frame extends JFrame {
         f.add(textfield);
         f.add(label);
         f.add(b);
-        f.setSize(300, 300);
+        f.setSize(500, 500);
         f.setLayout(null);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +43,7 @@ class Frame extends JFrame {
                 int user_int = Integer.parseInt(textfield.getText());
                 if (user_int == random_int) {
                     label1.setText("You win!");
-                    JOptionPane.showMessageDialog(null,"Try again later");
+                    JOptionPane.showMessageDialog(null,"Easy win, try again later");
                     f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
                 }
                 else if (user_int > random_int) {
@@ -54,7 +54,7 @@ class Frame extends JFrame {
                 }
                 summ[0] += 1;
                 if (summ[0] == 3) {
-                    JOptionPane.showMessageDialog(null,"You lose!");
+                    JOptionPane.showMessageDialog(null,"You lose! Number was " + random_int);
                     f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
                 }
         };
