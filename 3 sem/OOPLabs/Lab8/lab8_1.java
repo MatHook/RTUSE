@@ -14,6 +14,8 @@ public class lab8_1 {
 
         try(FileWriter writer = new FileWriter("textfile", false)) {
             writer.write(line);
+            writer.append('\n');
+            writer.append('E');
             writer.flush();
         }
         catch (IOException ex) {
