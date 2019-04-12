@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lab2</string>
+    <string name="title_tech_list">Techs</string>
+    <string name="title_tech_detail">Tech Detail</string>
+    <string name="tech_image">Tech image</string>
+    <string name="large_tech_image">Large tech image</string>
+</resources>
