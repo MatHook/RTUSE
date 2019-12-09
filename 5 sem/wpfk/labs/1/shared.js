@@ -2,13 +2,15 @@ class Shared {
   constructor() {
     this.values = [];
     this.increase = false;
+    this.alternate = false;
   }
 
 
   serialize() {
     return JSON.stringify({
       values: this.values,
-      increase: this.increase
+      increase: this.increase,
+      alternate: this.alternate
     });
   }
 
@@ -17,6 +19,7 @@ class Shared {
 
     pars.values = data.values;
     pars.increase = data.increase;
+    pars.alternate = data.alternate;
 
     return pars;
   }
@@ -32,11 +35,10 @@ class Shared {
     return pars;
   }
 
-  isIncrease(data) {
+  isIncrease() {
     const pars = this;
     var i = 0;
 
-    // 5 6 4
     while( i < pars.values.length - 1 ) { // пока i не дойдет до конечного идекса массива будет крутиться в цикле
       if (pars.values[i] < pars.values[i + 1]) { // если "первый" элемент меньше "следующего" тогда заходим в условие
         pars.increase = true; // ставим значение true для pars.increase
@@ -50,12 +52,30 @@ class Shared {
     return pars.increase;
   }
 
+  isAlternating() {
+    const pars = this;
+    var i = 0;
+    var count = 0;
+
+    while( i < pars.values.length - 1 ) {
+      if (pars.values[i]*pars.values[i + 1]<0) {
+        count++;
+      } else break;
+      i++;
+    }
+
+    if (count === pars.values.length - 1) {
+      pars.alternate = true;
+    }
+
+    return pars.alternate;
+  }
 
   getResult() {
-    const { values: tokens, increase: flag } = this;
+    const { values: tokens, increase: flag1, alternate: flag2 } = this;
 
     try {
-      return `${tokens} increasing: ${this.isIncrease()}`;
+      return `${tokens} Incrasing: ${this.isIncrease()}, Alternating: ${this.isAlternating()} `;
     } catch {
       return 0;
     }
