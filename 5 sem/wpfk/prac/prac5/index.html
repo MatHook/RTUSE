@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prac5</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer>
+      document.onmousemove = () => {
+        document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeEnd', '<img src="1.jpg" id="png">');
+        var png = document.getElementById('png');
+        png.style.position = 'fixed';
+
+        document.onmousemove = (event) => {
+          png.style.left = event.clientX +5+'px';
+          png.style.top = event.clientY +5+'px';
+        }
+      }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
