@@ -1,56 +1,61 @@
-class Calculator {
+class Shared {
   constructor() {
-    this.values = ['', ''];
-    this.operator = '';
+    this.values = [];
+    this.increase = false;
   }
 
-  /* ------------------------------------------- */
 
   serialize() {
     return JSON.stringify({
       values: this.values,
-      operator: this.operator
+      increase: this.increase
     });
   }
 
   static deserialize(data) {
-    const calc = new Calculator();
+    const pars = new Shared();
 
-    calc.values = data.values;
-    calc.operator = data.operator;
+    pars.values = data.values;
+    pars.increase = data.increase;
 
-    return calc;
+    return pars;
   }
 
-  /* ------------------------------------------- */
-
-  static fromValues(leftValue, operator, rightValue) {
-    const calc = new Calculator();
-
-    calc.values = [leftValue, rightValue];
-    calc.operator = operator;
-
-    return calc;
-  }
 
   static fromString(string) {
     const tokens = string.split(' ');
 
-    const calc = new Calculator();
+    const pars = new Shared();
 
-    calc.values = [tokens[0], tokens[2]];
-    calc.operator = tokens[1];
+    pars.values = tokens;
 
-    return calc;
+    return pars;
   }
 
-  /* ------------------------------------------- */
+  isIncrease(data) {
+    const pars = this;
+    var i = 0;
+
+    // 5 6 4
+    while( i < pars.values.length - 1 ) { // пока i не дойдет до конечного идекса массива будет крутиться в цикле
+      if (pars.values[i] < pars.values[i + 1]) { // если "первый" элемент меньше "следующего" тогда заходим в условие
+        pars.increase = true; // ставим значение true для pars.increase
+      }
+      else { // если условние не прошло тогда заходим в else
+        pars.increase = false // и ставим значение false
+        return pars.increase;
+      }
+      i++; // добавляем +1 к i чтобы проверять следующие элементы и не крутиться бесконечно
+    }
+    return pars.increase;
+  }
+
 
   getResult() {
-    const { values: [lv, rv], operator } = this;
+    const { values: tokens, increase: flag } = this;
 
     try {
-      return eval(`${lv} ${operator} ${rv}`);
+      return `${tokens} increasing: ${this.isIncrease()}`;
     } catch {
       return 0;
     }
@@ -58,5 +63,5 @@ class Calculator {
 }
 
 module.exports = {
-  Calculator,
+  Parser: Shared,
 }
