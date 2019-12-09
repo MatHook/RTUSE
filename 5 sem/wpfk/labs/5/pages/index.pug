@@ -1,0 +1,30 @@
+extends layout.pug
+
+block vars
+    - var title = "Главная"
+
+block content
+  div
+    p Result: <span id='res'></span>
+
+  form(id='form')
+    input(id='expr' placeholder='Выражение')
+    button(type='submit') go
+
+  script.
+    document.querySelector('#form').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      var expr = document.querySelector('#expr').value;
+      var result = document.querySelector('#res');
+
+      fetch(`/api/eval`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({expr: expr}),
+      })
+        .then((response) => response.json())
+        .then((data) => result.innerHTML = data.result);
+
+      return false;
+    });

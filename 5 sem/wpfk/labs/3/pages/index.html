@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body>
+    <div class="header">
+        <a href="/">Главная</a>
+        <a href="/about">О себе</a>
+        <a href="/table">Таблица</a>
+    </div>
+    <div class="content">
+        <div>Result: <span id="res"></span></div>
+        <form id="form">
+            <input id="expr" placeholder="Данные" />
+            <button type="submit">Let's go</button>
+        </form>
+    </div>
+    <div class="footer">© Матвей Крючков</div>
+
+    <script>
+        document.querySelector('#form').addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          var expr = document.querySelector('#expr').value;
+          var result = document.querySelector('#res');
+
+          fetch(`/api/eval`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ expr: expr }),
+          })
+          .then((response) => response.json())
+          .then((data) => result.innerHTML = data.result);
+
+          return false;
+        });
+    </script>
+</body>
+</html>

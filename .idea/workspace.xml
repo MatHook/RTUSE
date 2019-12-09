@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c9796b-67eb-4fc1-b51d-7b1e4ed859cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4 sem/SAD/Lab1/HashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4 sem/SAD/Lab1/lab_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/datavase.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/entity/Student.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/pages/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/pages/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/4/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/datavase.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/entity/Student.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/about.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/header.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/layout.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/students-in-table.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/pages/table.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/5/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5 sem/wpfk/2/lab2.html" beforeDir="false" afterPath="$PROJECT_DIR$/5 sem/wpfk/2/lab2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5 sem/wpfk/labs/1/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/5 sem/wpfk/labs/1/shared.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,40 +38,6 @@
   <component name="FavoritesManager">
     <favorites_list name="RTU-SE-WORKS" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/4 sem/SAD/Lab1/lab_1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4 sem/SAD/Lab1/HashSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-              <folding>
-                <element signature="e#149#150#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1241#1242#0" expanded="true" />
-                <element signature="e#1266#1267#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -58,94 +45,68 @@
         <option value="module-info" />
         <option value="package-info" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="package.json" />
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="Pug File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/module-info.java" />
-        <option value="$PROJECT_DIR$/4 sem/SAD/Lab1/Main.java" />
-        <option value="$PROJECT_DIR$/4 sem/SAD/Lab1/HashSet.java" />
-        <option value="$PROJECT_DIR$/4 sem/SAD/Lab1/lab_1.java" />
-      </list>
-    </option>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern=".pug" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectId" id="1R0nUFZF0yb5K1HZFWuGqgN3TT1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RTU-SE-WORKS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTU-SE-WORKS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTU-SE-WORKS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTU-SE-WORKS" type="462c0819:PsiDirectoryNode" />
-              <item name="4 sem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTU-SE-WORKS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RTU-SE-WORKS" type="462c0819:PsiDirectoryNode" />
-              <item name="4 sem" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RTU-SE-WORKS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551420999536" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/5 sem/wpfk/labs/5" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/iNaHook/RTU-SE-WORKS.git" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/5 sem/wpfk/labs/5" />
+      <recent name="$PROJECT_DIR$/5 sem/wpfk/labs/4" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/5 sem/wpfk/Lab2" />
+      <recent name="$PROJECT_DIR$/5 sem/wpfk/Lab1" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
     <configuration name="lab_1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab_1" />
       <module name="RTU-SE-WORKS" />
@@ -153,6 +114,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/5 sem/wpfk/labs/4/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -168,245 +156,71 @@
       <workItem from="1551288232317" duration="116000" />
       <workItem from="1551288419158" duration="706000" />
       <workItem from="1551289385277" duration="3901000" />
+      <workItem from="1568812897499" duration="4263000" />
+      <workItem from="1570708612553" duration="2557000" />
+      <workItem from="1572436324723" duration="310000" />
+      <workItem from="1575724756781" duration="61000" />
+      <workItem from="1575724891097" duration="15000" />
+      <workItem from="1575724930244" duration="2002000" />
+      <workItem from="1575730541807" duration="28371000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4987000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.07796852" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50089765" side_tool="true" weight="0.16309012" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.16220239" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50089765" side_tool="true" weight="0.16309012" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="1" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="https://github.com/iNaHook/RTU-SE-WORKS.git">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Labs.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-info.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3 sem/OOPPractice/Prac2/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 sem/SAD/Lab1/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3 sem/OOPLabs/Lab1/lab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 sem/SAD/Lab1/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <element signature="e#149#150#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4 sem/SAD/Lab1/lab_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>RTU-SE-WORKS</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575910143922">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="451" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1575910143922" />
+    <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575724896910">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1575724896909" />
+    <state x="385" y="208" width="670" height="692" key="EditFileWatcherDialog" timestamp="1575911954897">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="208" width="670" height="692" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1575911954897" />
+    <state width="1419" height="218" key="GridCell.Tab.0.bottom" timestamp="1575907450618">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="218" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1575907450618" />
+    <state width="1419" height="218" key="GridCell.Tab.0.center" timestamp="1575907450616">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="218" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1575907450616" />
+    <state width="1419" height="218" key="GridCell.Tab.0.left" timestamp="1575907450614">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="218" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1575907450614" />
+    <state width="1419" height="218" key="GridCell.Tab.0.right" timestamp="1575907450617">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="218" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1575907450617" />
+    <state x="229" y="98" key="SettingsEditor" timestamp="1575911962949">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="98" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1575911962949" />
+    <state x="329" y="169" key="scopes" timestamp="1575911919948">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="329" y="169" key="scopes/0.0.1440.900@0.0.1440.900" timestamp="1575911919948" />
   </component>
 </project>
