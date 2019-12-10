@@ -21,15 +21,15 @@ body {
     height: 48px;
     display: flex;
     padding: 1rem;
-    color: #111111;
-    background-color: yellowgreen;
+    color: white;
+    background-color: #006064;
 }
 
 .header {
     width: 100%;
     display: flex;
     padding: 1rem;
-    background-color: yellowgreen;
+    background-color: #006064;
 }
 
 .header a {
@@ -37,11 +37,11 @@ body {
     display: inline-block;
     margin-left: 1rem;
     text-decoration: none;
-    color: #111111;
+    color: white;
 }
 
 .header a:hover {
-    color: #666666;
+    color: darkgrey;
     text-decoration: none;
 }
 
@@ -59,13 +59,14 @@ body {
 }
 
 #form input {
-    width: 74%;
+    width: 40%;
     padding: 0.5rem;
 }
 
 #form button {
-    width: 25%;
-    padding: 0.5rem 1rem;
+    width: 15%;
+    padding: 0.6rem 1rem;
+    margin-left: 1em;
 }
 
 .student {
