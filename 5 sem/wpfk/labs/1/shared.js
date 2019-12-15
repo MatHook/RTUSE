@@ -75,7 +75,7 @@ class Shared {
     const { values: tokens, increase: flag1, alternate: flag2 } = this;
 
     try {
-      return `${tokens} Incrasing: ${this.isIncrease()}, Alternating: ${this.isAlternating()} `;
+      return `${tokens} Возрастает: ${this.isIncrease()}, Чередуется: ${this.isAlternating()} `;
     } catch {
       return 0;
     }

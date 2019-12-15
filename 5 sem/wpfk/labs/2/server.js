@@ -28,6 +28,7 @@ const server = http.createServer((request, response) => {
 
     response.end(`
             <html>
+                <meta charset="UTF-8">
                 <body>
                     URL: ${request.url}.<br/>
                     RESULT: ${pars.getResult()}<br/>
