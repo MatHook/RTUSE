@@ -1,0 +1,16 @@
+#define SEMICOLON 1
+#define BECOMES 2
+#define PLUS 3
+#define MINUS 4
+#define TIMES 5
+#define SLASH 6
+#define LPAREN 7
+#define RPAREN 8
+#define HEXNUMBER 9
+#define IDENT 10
+#define UNKNOWN 11
+#define FOR 12
+#define DO 13
+#define EQUALS 14
+#define LESS 15
+#define GREATER 16
