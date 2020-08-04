@@ -1,0 +1,10 @@
+each student in students
+    tr
+        td= student.id
+        td= student.name
+        td= student.city
+        td= student.birthday
+        td
+            button(type='button' onclick=`loadEditStudent("${student.id}", "${student.name}", "${student.city}", "${student.birthday}");`) редактировать
+        td
+            button(type='button' onclick=`removeStudent("${student.id}");`) удалить

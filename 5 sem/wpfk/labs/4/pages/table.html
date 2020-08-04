@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <div class="header">
+        <a href="/">Главная</a>
+        <a href="/about">О себе</a>
+        <a href="/table">Таблица</a>
+    </div>
+
+    <div class="content">
+        <table class="students">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Город</th>
+                    <th>Дата Рождения</th>
+                    <th>Редактировать</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+        <form id="student" class="student">
+            <div id="studentMessage"></div>
+            <input id="name" placeholder="имя" />
+            <input id="city" placeholder="город" />
+            <input id="birthday" placeholder="дата рождения" />
+            <input id="id" type="hidden" value="" />
+            <button id="btn_1" type="submit">Добавить</button>
+            <button id="btn_2" type="button" onclick="clearForm()">Очистить</button>
+        </form>
+    </div>
+
+    <div class="footer">© Матвей Крючков</div>
+
+    <script>
+        var tbody = document.querySelector('#tbody');
+
+        function addStudentToTable({ id, name, city, birthday }) {
+          var row = document.createElement('tr');
+
+          var data1 = document.createElement('td');
+          data1.innerHTML = id;
+          var data2 = document.createElement('td');
+          data2.innerHTML = name;
+          var data3 = document.createElement('td');
+          data3.innerHTML = city;
+          var data4 = document.createElement('td');
+          data4.innerHTML = birthday;
+          var data5 = document.createElement('td');
+          var data5button = document.createElement('button');
+          data5button.innerHTML = 'edit';
+          data5button.addEventListener('click', () => {
+            loadEditStudent(id, name, city, birthday);
+          });
+          data5.append(data5button);
+          var data6 = document.createElement('td');
+          data6.innerHTML = `<button onclick="removeStudent(${id});">x</button>`;
+
+          row.append(data1, data2, data3, data4, data5, data6);
+
+          tbody.append(row);
+        }
+
+        function refreshStudents() {
+          const table = document.querySelector('#tbody');
+          while (table.firstChild) {
+            table.removeChild(table.firstChild);
+          }
+
+          fetch(`/api/getStudents`)
+          .then((response) => response.json())
+          .then((data) => {
+            for (let i = 0; i < data.students.length; i += 1) {
+              addStudentToTable(data.students[i]);
+            }
+          });
+        }
+
+        function submitForm(stundentData) {
+          if (stundentData.id) {
+            fetch(`/api/updateStudent`, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(stundentData),
+            })
+              .then(() => refreshStudents());
+          } else {
+              fetch(`/api/addStudent`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(stundentData),
+              })
+              .then((response) => response.json())
+              .then((data) => {
+                stundentData.id = data.id;
+                addStudentToTable(stundentData);
+              });
+          }
+        }
+
+        function removeStudent(studentId) {
+          fetch(`/api/removeStudent`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: studentId }),
+          })
+            .then(() => refreshStudents())
+        }
+
+        function loadEditStudent(id, name, city, birthday) {
+          setFormData(id, name, city, birthday);
+          document.querySelector('#studentMessage').innerHTML =
+            `Editing student #${id}(${name}`;
+          document.querySelector('#btn_1').innerHTML = 'Сохранить';
+          document.querySelector('#btn_2').innerHTML = 'Отменить';
+        }
+
+        function editStudent(id, name, city, birthday) {
+          fetch(`/api/removeStudent`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: studentId }),
+          })
+            .then(() => refreshStudents())
+        }
+
+        function getFormData() {
+          return {
+            name: document.querySelector('#name').value,
+            city: document.querySelector('#city').value,
+            birthday: document.querySelector('#birthday').value,
+            id: document.querySelector('#id').value,
+          }
+        }
+
+        function setFormData(id, name, city, birthday) {
+          document.querySelector('#name').value = name;
+          document.querySelector('#city').value = city;
+          document.querySelector('#birthday').value = birthday;
+          document.querySelector('#id').value = id;
+        }
+
+        function clearForm() {
+          setFormData('', '', '', '');
+          document.querySelector('#studentMessage').innerHTML = '';
+          document.querySelector('#btn_1').innerHTML = 'Добавить';
+          document.querySelector('#btn_2').innerHTML = 'Очистить форму';
+        }
+
+        document.querySelector('#student').addEventListener('submit', (e) => {
+          e.preventDefault();
+          submitForm(getFormData());
+          clearForm();
+          return false;
+        });
+
+        refreshStudents();
+    </script>
+</body>
+</html>
