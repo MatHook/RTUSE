@@ -1,0 +1,7 @@
+web:
+  image: nginx
+  volumes:
+   - /Users/matvey/Documents/GitHub/RTU-SE-WORKS/7sem/content:/var/www
+   - ./nginx.conf:/etc/nginx/nginx.conf
+  ports:
+   - "727:80"
