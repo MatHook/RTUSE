@@ -1,29 +1,18 @@
 #lang racket
 
 #|
-    Написать программу, реализующую метод быстрой сортировки
+  Есть три числа. Построить список из кубов этих чисел,
+  если все три числа – нечетные, возвратить сумму чисел – иначе.
 |#
 
-(define (quick-sort arr)
-  (cond
-    [(< (length arr) 2) arr]
-    [else (let ([pivot (car arr)] [rest (cdr arr)])
-            (append
-             (quick-sort (filter (lambda (x) (< x pivot)) rest))
-             (list pivot)
-             (quick-sort (filter (lambda (x) (>= x pivot)) rest))
-             )
-          )
-    ]
-  )
+(define (pow3 x) (* x x x))
+
+(define (listToPow list1)
+  (if (and (= (remainder (car list1) 2) 0)
+           (= (remainder (car (cdr (cdr list1))) 2) 0))
+      (list (pow3(car list1)) (pow3(car (cdr list1))) (pow3(car (cdr (cdr list1)))))
+      (+ (car list1) (car (cdr list1)) (car (cdr (cdr list1)))))
 )
 
-(define (test-qs n)
-  (define array (build-list n (lambda (i) (random 100))))
-  (displayln array)
-  (displayln (quick-sort array))
-)
-
-(displayln "Алгоритм быстрой сортировки:")
-(test-qs 20)
-(newline)
+(displayln (listToPow (list 10 20 40)))
+(displayln (listToPow (list 5 11 33)))
